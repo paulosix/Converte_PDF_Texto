@@ -21,21 +21,6 @@ namespace Converte_PDF_Texto
             InitializeComponent();
         }
 
-        private void btnConvertePDF_Click(object sender, EventArgs e)
-        {
-            //try
-            //{
-            //    ConvertePDF pdftxt = new ConvertePDF();
-            //    txtArquivoTexto.Text = pdftxt.ExtrairTexto_PDF(txtCaminoNomePDF.Text);
-            //    if (pdftxt.ExtrairTexto_PDF(txtCaminoNomePDF.Text).Contains("041.253.069-40"))
-            //        MessageBox.Show("Achou informação");
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show(ex.Message);
-            //}
-        }
-
         private void btnProcurar_Click(object sender, EventArgs e)
         {
             folderBrowserDialog1.Description = "Selecione o Diretorio";
@@ -57,7 +42,6 @@ namespace Converte_PDF_Texto
                 try
                 {
                     ConvertePDF pdftxt = new ConvertePDF();
-                    //txtArquivoTexto.Text = pdftxt.ExtrairTexto_PDF(txtCaminoNomePDF.Text);
                     if (pdftxt.ExtrairTexto_PDF(file.FullName).Contains(txtCPF.Text))
                         txtArquivoTexto.Text += file.FullName;
                 }
